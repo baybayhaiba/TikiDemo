@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TikiDemo</string>
+    <string name="money" formatted="true">%d <u>đ</u></string>
+</resources>

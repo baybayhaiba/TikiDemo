@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16sp"
+    android:background="@android:color/transparent"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/custom_product_flash_deals"
+                android:layout_width="140sp"
+                android:layout_height="140sp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/light" />
+
+            <TextView
+                android:id="@+id/custom_sale_flash_deals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/custom_product_flash_deals"
+                android:background="@drawable/background_sales"
+                android:paddingLeft="12sp"
+                android:paddingTop="5sp"
+                android:paddingRight="12sp"
+                android:paddingBottom="5sp"
+                android:text="-90%"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/custom_price_sale_flash_deals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:gravity="center"
+            android:text="@string/money"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp">
+
+            <ProgressBar
+                android:id="@+id/custom_progressbar_flashdeals"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:max="110"
+                android:progress="10"
+                android:progressDrawable="@drawable/progress_flashdeals" />
+
+            <TextView
+                android:id="@+id/custom_tv_sold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/custom_progressbar_flashdeals"
+                android:layout_centerHorizontal="true"
+                android:text="Vừa mở bán"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/custom_hot_flash_deals"
+                android:layout_width="15sp"
+                android:layout_height="15sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="7sp"
+
+                android:src="@drawable/flame" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
