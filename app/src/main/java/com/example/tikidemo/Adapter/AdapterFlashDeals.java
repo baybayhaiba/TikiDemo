@@ -1,6 +1,7 @@
 package com.example.tikidemo.Adapter;
 
 import android.content.Context;
+import android.icu.number.FormattedNumber;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +29,7 @@ public class AdapterFlashDeals extends RecyclerView.Adapter<AdapterFlashDeals.Vi
 
     private Context context;
     private FlashDeals flashDeals;
+    NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.forLanguageTag("vi-VN"));
 
     public AdapterFlashDeals(Context context, FlashDeals flashDeals) {
         this.context = context;
@@ -53,7 +55,7 @@ public class AdapterFlashDeals extends RecyclerView.Adapter<AdapterFlashDeals.Vi
         double price = detail.getSpecialPrice();
         holder.tvSale.setText(detail.getDiscountPercent() + "%");
 
-        holder.tvPrice.setText(Html.fromHtml(Math.round(price) + " <u>đ<u>"));
+        holder.tvPrice.setText(formatter.format(price));
         Picasso.get().load(detail.getProduct().getThumbnailUrl())
                 .into(holder.imgProduct, new Callback() {
                     @Override
